@@ -1,2 +1,4 @@
+#============= installd ==============
+allow installd oemfs:filesystem quotaget;
 allow installd firmware_file:filesystem quotaget;
 allow installd fsg_file:filesystem quotaget;

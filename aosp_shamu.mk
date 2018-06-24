@@ -19,10 +19,10 @@ TARGET_SCREEN_WIDTH := 1440
 TARGET_BOOT_ANIMATION_HALF_RES := true
 TARGET_BOOT_ANIMATION_RES := 1440
 
-#Open Gapps
+# Open Gapps
 TARGET_GAPPS_ARCH := arm
 
-# Inherit some common LineageOS stuff.
+# Inherit some common aosp stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from the common Open Source product configuration
@@ -32,15 +32,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, device/moto/shamu/device.mk)
 $(call inherit-product-if-exists, vendor/motorola/shamu/shamu-vendor.mk)
 
-<<<<<<< HEAD:aosp_shamu.mk
-DEVICE_PACKAGE_OVERLAYS += device/moto/shamu/overlay-lineage
-
-## Device identifier. This must come after all inclusions
-PRODUCT_NAME := aosp_shamu
-=======
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_shamu
->>>>>>> upstream/lineage-15.1:lineage.mk
+PRODUCT_NAME := aosp_shamu
 PRODUCT_DEVICE := shamu
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 6
